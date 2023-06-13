@@ -188,7 +188,14 @@ int main(int argc, char** argv) {
 	// Если задействован ключ -max, то инициализируем максимальное значение для генерируемого числа
 	const int max_num = get_max_num(argc, argv, reasonable_max, high_scores_filename);
 	// Если задействован ключ "-table", то необходимо завершить выполнение программы
-	if(!max_num) return 0;
+	if(!max_num) {
+		// Выводим таблицу рекордов в консоль
+		if(!read_file(high_scores_filename)){
+			std::cout << "Failed attempt to read file!" << std::endl;
+			return -1;
+		}
+		return 0;
+	}
 
 	// Заходим в блок игры
 	do{
