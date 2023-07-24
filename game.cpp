@@ -4,14 +4,14 @@
 #include <ctime>
 #include "headers.h"
 
-int game(const int& maxnum, std::string& usrname, bool flg){
+int game(int maxnum, std::string& usrname, bool flg){
     if(flg) {
         // Блок знакомства с пользователем
         std::cout << "Welcome to 'Guess the number' game!" << std::endl;
         std::cout << "Enter your username:" << std::endl;
 
         std::getline(std::cin, usrname);
-        std::srand(unsigned int(std::time(nullptr)));
+        std::srand(static_cast<unsigned>(std::time(nullptr)));
         std::cout << "Ok, let's go! :)" << std::endl;
     }
 

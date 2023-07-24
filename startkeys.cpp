@@ -10,7 +10,7 @@
 // Устанавливает в качестве максимального задаваемого числа относительное значение в зависимости от аргумента
 // Ключ "-table"
 // При запуске с данным ключом просто выводится таблица рекордов без игры
-int get_max_num(int const& paramnum, char** params, int const& max_upplim, std::string const& r_fname) {
+int get_max_num(int paramnum, char** params, int max_upplim, std::string const& r_fname) {
 	int default_number = 100;
 
 	// Ключевых слов может быть не больше двух
