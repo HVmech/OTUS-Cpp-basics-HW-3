@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(03.guess_the_number)
+project(guess_the_number)
 
 add_executable(guess_the_number
 	startkeys.cpp
